@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Concatenaciones 1</title>
+</head>
+<body>
+    <script>
+        let nombre = "Mateo";
+        let apellido = "Maas";
+        let edad = 17;
+        let años = "Su edad es: ".concat(edad) /* El comando (.concat) sirve para concatenar también. */
+
+        document.write("Nombre del estudiante: " + nombre); /* Se puede concatenar con (+), con coma (,) */ 
+        document.write("<br>");
+        document.write("Apellido del estudiante: ", apellido); /* Con poner solo una coma (,) obtenemos el mismo efecto que concatenar con (+). */
+        document.write("<br>");
+        document.write(años);
+        
+    </script>
+</body>
+</html> 
