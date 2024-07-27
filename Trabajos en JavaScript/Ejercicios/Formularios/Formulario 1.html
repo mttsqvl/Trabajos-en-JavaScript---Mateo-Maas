@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulario 1 </title>
+</head>
+<body>
+    <h4> Botón de incremento </h4>
+    <br>
+    <form>
+        <!-- En el (type) se elige el tipo de valor que queremos ingresar, y en (value) agregamos lo que queremos que diga. -->
+        <input type="button" value="Incremento" onclick="incremento()"> <!-- Con el (onclick) se registra el click del usuario, permitiendo ejecutar el código requerido. -->
+    </form>
+    <script>
+       let contador = 0;
+        /* Luego de (function), va el nombre de la función, seguido de la condición, que va en paréntesis (en este caso no se define), y en {} se define el contenido de esta.*/
+       function incremento(){
+            contador++; /* El (++) aumenta el valor en 1 cada vez que se ejecute esta función. */
+            alert("El número es: "+ contador); /* Con (alert) saldrá un Pop-Up en la pantalla al presionar el botón. */ 
+       }
+    </script>
+</body>
+</html>
