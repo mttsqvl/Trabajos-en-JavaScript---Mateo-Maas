@@ -1,0 +1,170 @@
+<!-- Mateo Maas Esquivel
+5to Bachillerato Gamma
+Programación II
+
+Proyecto Final - Tercer Bimestre -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login - Proyecto Final </title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    
+    <main>
+
+        <div class="Contenedor"> 
+
+
+            <div class="Backdoor"> <!-- Esta etiqueta servirá para mostrar el recuadro para alternar entre modalidad de registrarse o iniciar sesión.-->
+                <div class="Backdoor_login"> <!-- Cuando se este en la modalidad de registro, gracias a esta etiqueta podremos ir a inicar sesión.-->
+                    <h3> ¿Ya tenías una cuenta? </h3>
+                    <p> Inicia sesión para acceder a la página del proyecto final.</p> 
+                    <button id="btn__Login"> Iniciar Sesión </button>
+                </div>
+
+                <div class="Backdoor_registro"> <!-- Cuando se este en la modalidad de inicar sesión, gracias a esta etiqueta podremos ir a registrarnos.-->
+                    <h3> ¿Aún no tienes una cuenta? </h3>
+                    <p> Registrate e inicia sesión para acceder a la página del proyecto final.</p> 
+                    <button id="btn__Registro"> Registrate </button>
+                </div>
+                    
+            </div>
+           
+           
+
+            <div class="Formularios_Login_Registro">
+
+                <!-- Login -->
+
+                <form action="" class="login"> <!-- Este formulario se mostrará para que el usuario ingrese los datos de inicio de sesión.-->
+
+                    <h2> Iniciar sesión </h2>
+
+                    <input type="text" id="users" placeholder="Correo Electronico"> <!-- (placeholder) sirve para que salga el texto en "" en el mismo cuadro de texto.-->
+
+                    <input type="password" id="claves" placeholder="Contraseña">
+
+                    <button onclick="verificar()"> Entrar </button> <!-- Es importante vincular la función correspondiente al botón. -->
+
+                    <script>
+
+                        let control = 0;
+
+                        let contraseña1 = "passwordproyectofinal"; /* Definimos la contraseña correcta. */
+                
+                        let user = "MateoMaas@gmail.com"; /* Definimos el usuario correcto. */
+
+                        function verificar(){
+                
+                            let clave = document.getElementById("claves").value; 
+                            let userss = document.getElementById("users").value; 
+
+                        
+                        
+                            if (clave != contraseña1){ /* Si la clave ingresada es diferente a la contraseña definida...*/
+                                alert("El usuario o la contraseña es incorrecta. ") /* Mostrará un mensaje de error. */
+                            } 
+                            else if (userss != user){ /* Si el usuario ingresado es diferente a el usuario definido...*/
+                                alert("El usuario o la contraseña es incorrecta. ") /* Mostrará un mensaje de error. */
+                            }else { 
+                                window.open("Página Web.html"); /* Si la contraseña es correcta, abrirá la página web. */
+                            }
+                            
+                        
+                        
+                        }
+                
+                    </script>
+
+                </form>
+
+                <!-- Registro -->
+                <form action="" class="registro"> <!-- Este formulario se mostrará para que el usuario ingrese los datos para registrarse.-->
+
+                    <h2> Registro </h2>
+
+                    <input type="text" id="name" placeholder="Nombre"> <!-- (placeholder) sirve para que salga el texto en "" en el mismo cuadro de texto.-->
+
+                    <input type="text" id="apellido" placeholder="Apellido">
+
+                    <input type="text" id="país" placeholder="País">
+                    
+                    <input type="text" id="email" placeholder="Correo Electrónico">
+
+                    <input type="password" id="contraseñas" placeholder="Contraseña">
+
+                    <input type="password" id="contraseñasn" placeholder="Confirmar Contraseña">
+
+                    <button onclick="verificar2()"> Registrate </button>
+
+
+                    
+                    <script>
+
+                        /* Definimos los parámetros que aceptará el programa. */
+
+                        let control2 = 0;
+
+                        let nombre = "Mateo"; 
+                        let last_name = "Maas";
+                        let country = "Guatemala";
+                        let correo = "MateoMaas@gmail.com";
+                        let pass = "Proyecto Final";
+
+                
+
+                        function verificar2(){
+                
+                            let names = document.getElementById("name").value;
+                            let lname = document.getElementById("apellido").value; 
+                            let cpaís = document.getElementById("país").value;
+                            let correo_electronico = document.getElementById("email").value; 
+                            let password = document.getElementById("contraseñas").value; 
+                            let passwordn = document.getElementById("contraseñasn").value;
+
+                            if (names != nombre){ /* Si la clave ingresada es diferente a la contraseña definida...*/
+                                alert("Alguno de los campos es incorrecto.") /* Mostrará un mensaje de error. */
+                            } 
+                            else if (lname != last_name){ /* Si el usuario ingresada es diferente a el usuario definido...*/
+                                alert("Alguno de los campos es incorrecto.") /* Mostrará un mensaje de error. */
+                            } 
+                            else if (cpaís != country){ /* Si el usuario ingresada es diferente a el usuario definido...*/
+                                alert("Alguno de los campos es incorrecto.") /* Mostrará un mensaje de error. */
+                            }
+                            else if (correo_electronico != correo){ /* Si el usuario ingresada es diferente a el usuario definido...*/
+                                alert("Alguno de los campos es incorrecto.") /* Mostrará un mensaje de error. */
+                            }
+                            else if (password != pass){ /* Si el usuario ingresada es diferente a el usuario definido...*/
+                                alert("Alguno de los campos es incorrecto.") /* Mostrará un mensaje de error. */
+                            }
+                            else if (passwordn != pass){ /* Si el usuario ingresada es diferente a el usuario definido...*/
+                                alert("Alguno de los campos es incorrecto.") /* Mostrará un mensaje de error. */
+                            }
+                            else{
+                                window.open("Página Web.html"); /* Si la contraseña es correcta, abrirá la página web. */
+                            }
+
+                        }
+                
+                    </script>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <script src="Login.js"></script>
+
+   
+</body>
+</html>

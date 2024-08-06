@@ -1,0 +1,230 @@
+/* General setup */
+
+html, body {
+    margin: 0; /* Margenes */
+    padding: 0; /* Marca donde comenzará el texto. */
+}
+
+html {
+    font-size: 10px;
+    background-color: rgb(6, 24, 48);
+}
+
+body {
+    width: 70%; /* Definimos el ancho que tendra la pestaña que contendrá el texto principal.*/
+    margin: 0 auto;
+}
+
+/* Esta etiqueta contndra los parámetros para la animación a, que será la del título. */
+
+#a {
+    animation: pulse 1s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+
+/* Esta etiqueta contndra los parámetros para la animación a, que será la de subítulos que cambian de color. */
+
+#b  {
+    animation: rainbow 4s infinite;
+  }
+  
+  @keyframes rainbow {
+    0% {
+      color: red;
+    }
+    15% {
+      color: orange;
+    }
+    30% {
+      color: yellow;
+    }
+    45% {
+      color: green;
+    }
+    60% {
+      color: blue;
+    }
+    75% {
+      color: indigo;
+    }
+    90% {
+      color: violet;
+    }
+  }
+
+/* Esta etiqueta contndra los parámetros para la animación a, que será la de subtítulos que brillan. */
+
+#c {
+    font-size: 36px;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+    }
+    100% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000, 0 0 80px #ff0000;
+    }
+  }
+
+/* Esta etiqueta será para imagenes, rotarán cuando se les pase el mouse por encima. */
+
+#d {
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-rotate:hover {
+    transform: rotate(360deg);
+}
+
+/* Esta etiqueta contndra los parámetros para una animación de imagen, que acercará la imagen cuando se le pase el cursor por encima. */
+
+#e {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-zoom-in:hover {
+    transform: scale(1.1);
+}
+
+
+/* Tipografía */
+
+/* Con las siguientes etiquetas, editaremos los títulos h1, h2, h3 y h4, cambiando la fuente y color de cada uno. */
+
+h1 { 
+    font-size: 4rem;  /* Un "rem" equivale a 16 pixeles. */
+    text-align: center; /* Editamos la alineación del texto al centro. */
+    color:darkred; /* Editamos el color del texto. */
+    text-shadow: 2px 2px 10px white; /* Editamos el sombreado que aparece en el título. */
+}
+
+h2, h3 { 
+    font-family: "Sonsie One", cursive;
+    color:white;
+}
+
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+}
+
+
+ /* Editamos la fuente y el color del texto de los parrafos y las listas de viñetas. */ 
+p, input, li { 
+    font-family: "Open Sans Condensed", sans-serif;
+    color: black;
+}
+
+
+/* En las siguientes etiquetas, editamos el tamaño de fuente y alineación de las etiquetas h2 y h3 del HTML.*/
+
+
+h1 { 
+    font-size: 4rem;  /* Un "rem" equivale a 16 pixeles. */
+    text-align: center; /* Editamos la alineación del texto al centro. */
+    color:darkred; /* Editamos el color del texto. */
+    text-shadow: 2px 2px 10px white; /* Editamos el sombreado que aparece en el título. */
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+} 
+
+h3 {
+    font-size: 2.2rem;
+}
+
+p, li { /* Recordatorio, <p> es la etiqueta para párrafos, y <li> es la etiqueta usada para URL's, con esta etiqueta editamos el tamaño de la fuente  */
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Editamos el fondo de el fondo del texto principal, de la pestaña que sale del lado derecho de la página y el pie de la página. */
+
+article, aside, footer {
+    background-color:darkblue;
+    padding: 1%;
+}
+
+
+
+
+main {
+    display: flex; /* Definimos la alineación del texto principal de la página. */
+}
+
+article {
+    flex: 4;
+}
+
+/* Editamos los parámetros de la pestaña del lado derecho de la página web. */
+
+aside {
+    flex: 1;
+    margin-left: 10px; /* Definimos que tan separada estará del texto principal. */
+    background-color: darkslategrey; /* Definimos el color del fondo. */
+}
+
+aside li {
+    padding-bottom: 10px;
+}
+
+
+footer {
+    margin-top: 10px; /* Definimos la separación con el texto principal. */
+}
+
+
+
+/* Estilos del formulario. */
+
+#myForm {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #00030a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+background-color: #00030a;
+}
